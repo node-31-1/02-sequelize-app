@@ -1,24 +1,24 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../utils/connection'); 
    // En Mayúsculas y singular      // en minúsculas y singular
-const User = sequelize.define('user', {
+const Car = sequelize.define('car', {
     // Definimos las columnas aquí
-    name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    email: {
+    brand: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    phone: {
+    model: {
         type: DataTypes.STRING,
         allowNull: false
     },
-    birthday: {
-        type: DataTypes.DATEONLY,
+    year: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
+    color: {
+        type: DataTypes.STRING,
         allowNull: false
     },
 });
 
-module.exports = User;
+module.exports = Car;
